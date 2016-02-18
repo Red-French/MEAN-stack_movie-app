@@ -1,12 +1,12 @@
-// server
+'use strict';
 
-var express = require('express');
-var mongoose = require('mongoose');
-var bodyParser = require('body-parser');
-var methodOverride = require('method-override');
-var _ = require('lodash');
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
+const _ = require('lodash');
 
-var app = express();  // Create the application
+const app = express();  // Create the application
 
 // Add Middleware necessary for REST API's
 app.use(bodyParser.urlencoded({extended: true}));
@@ -36,7 +36,7 @@ mongoose.connection.once('open', function() {     // running on something other 
                                            // A great way to take all of the models and dependency-inject
                                            // them into the controllers.
   // Load the routes
-var routes = require('./routes'); // requiring routes.js
+const routes = require('./routes'); // requiring routes.js
 _.each(routes, function(controller, route) {  // Iterate over routes; assign controller's value to tne first 
                                               // callback ('controller') and assign the key 'movie' to 'route'
 
