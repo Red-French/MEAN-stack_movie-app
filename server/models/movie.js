@@ -1,11 +1,12 @@
 // models>movie.js
+'use strict';
 
-var mongoose = require('mongoose'); // an interface into MongoDB
+const mongoose = require('mongoose'); // an interface into MongoDB
                                     // also allows to provie models to MongoDB that map directly
                                     // to the database
 
 // Create the MovieSchema
-var MovieSchema = new mongoose.Schema({  // When working with models in Mongoose, there will be a schema.
+const MovieSchema = new mongoose.Schema({  // When working with models in Mongoose, there will be a schema.
   title: {        // title property      // The schema is where all of the properties are defined
     type: String,                        // for this object and what type the properties are.
     required: true

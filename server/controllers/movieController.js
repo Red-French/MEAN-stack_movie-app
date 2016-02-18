@@ -1,5 +1,7 @@
-var Resource = require('resourcejs');
-// var restful = require('node-restful');
+'use strict';
+
+const Resource = require('resourcejs');
+// const restful = require('node-restful');
 
 module.exports = function(app, route) {
 
